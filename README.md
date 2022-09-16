@@ -1,1 +1,1 @@
-# nextjs-001-a-course
+# nextjs-001-a-cases-divulgacao
