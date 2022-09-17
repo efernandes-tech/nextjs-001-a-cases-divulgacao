@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import PageTitle from '../src/components/PageTitle';
 
 import Link from '../src/components/Link';
 
@@ -32,9 +32,7 @@ export async function getServerSideProps() {
 export default function FaqPage({ faq }) {
     return (
         <div>
-            <Head>
-                <title>FAQ - Alura Cases Campanha</title>
-            </Head>
+            <PageTitle>FAQ - Alura Cases Campanha</PageTitle>
             <h1>Alura Cases - FAQ</h1>
             <Link href="/">
                 Ir para a Home
