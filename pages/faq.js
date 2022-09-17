@@ -1,7 +1,19 @@
-import { useEffect, useState } from 'react';
 import Link from '../src/components/Link';
 
-export async function getStaticProps() {
+// SSG - Static Site Generation
+// SSR - Server Side Rendering
+// ISG - Incremental Static Generation
+
+/*
+export async function getServerSideProps() {
+    console.log('getStaticProps() - roda somente no build');
+    console.log('getServerSideProps() - atencao, em modo DEV sempre roda a cada acesso');
+*/
+
+export async function getServerSideProps() {
+    console.log('getServerSideProps() - roda a cada acesso recebido em PROD');
+    console.log('getServerSideProps() - atencao, em modo DEV sempre roda a cada acesso');
+
     const FAQ_API_URL = 'https://gist.githubusercontent.com/omariosouto/0ceab54bdd8182cbd1a4549d32945c1a/raw/578ad1e8e5296fa048e3e7ff6b317f7497b31ad9/alura-cases-faq.json';
     const faq = await fetch(FAQ_API_URL)
         .then((response) => response.json())
@@ -16,10 +28,6 @@ export async function getStaticProps() {
 }
 
 export default function FaqPage({ faq }) {
-    // const [faq, setFaq] = useState([]);
-    // useEffect(() => {
-    // }, [])
-
     return (
         <div>
             <h1>Alura Cases - FAQ</h1>
