@@ -6,7 +6,7 @@ export async function getStaticProps() {
     const faq = await fetch(FAQ_API_URL)
         .then((response) => response.json())
         .then((json) => {
-            return setFaq(json);
+            return json;
         })
     return {
         props: {
