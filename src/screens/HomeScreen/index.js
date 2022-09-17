@@ -310,6 +310,18 @@ export default function HomeScreen() {
                                         </Button>
                                     </Box>
                                 </Box>
+                                <Box>
+                                    <Link href="/ssg">
+                                        <a>
+                                            Navegar para SSG
+                                        </a>
+                                    </Link>
+                                    <Link href="/ssr">
+                                        <a>
+                                            Navegar para SSR
+                                        </a>
+                                    </Link>
+                                </Box>
                             </Box>
                         </Box>
                     </Box>
